@@ -1,0 +1,36 @@
+package associacao.exercicio.domain;
+
+public class Professor {
+    private String nome;
+    private String especializacao;
+    private Seminario[] seminarios;
+
+    public Professor(String nome, String especializacao) {
+        this.nome = nome;
+        this.especializacao = especializacao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEspecializacao() {
+        return especializacao;
+    }
+
+    public void setEspecializacao(String especializacao) {
+        this.especializacao = especializacao;
+    }
+
+    public Seminario[] getSeminarios() {
+        return seminarios;
+    }
+
+    public void setSeminarios(Seminario[] seminarios) {
+        this.seminarios = seminarios;
+    }
+}
