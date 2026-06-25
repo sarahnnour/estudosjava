@@ -1,6 +1,6 @@
-package exercicioRelascionamento.exercicio5;
+package exercicioRelascionamento.exercicio6;
 
-import exercicioRelascionamento.exercicio5.Funcionario;
+import exercicioRelascionamento.exercicio6.Funcionario;
 
 public class FuncionarioTest {
     static void main() {
@@ -15,7 +15,8 @@ public class FuncionarioTest {
     }
 
     public static void testFuncionario(){
-        Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, "28-10-2024", "21344322", true);
+        Data dataEntrada = new Data(01,3,2000);
+        Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
 
         System.out.println("Antes de usar os métodos demite() e bonifica()");
         System.out.println(funcionario1.toString());
@@ -28,16 +29,18 @@ public class FuncionarioTest {
     }
 
     public static void testaFuncionariosIguais(){
-        Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, "28-10-2024", "21344322", true);
-        Funcionario funcionario2 = new Funcionario("Sarah","TI","Porto Alegre", 1000, "28-10-2024", "21344322", true);
-        Funcionario funcionario3 = new Funcionario("Luiza","TI","Canoas", 1000, "28-10-2024", "21344322", true);
+        Data dataEntrada = new Data(01,3,2000);
+        Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
+        Funcionario funcionario2 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
+        Funcionario funcionario3 = new Funcionario("Luiza","TI","Canoas", 1000, dataEntrada, "21344322", true);
 
         funcionario1.igual(funcionario2);
         funcionario1.igual(funcionario3);
     }
 
     public static void testaFuncionariosComMesmaReferencia(){
-        Funcionario funcionario1 = new Funcionario("Luiza","TI","Canoas", 1000, "28-10-2024", "21344322", true);
+        Data dataEntrada = new Data(01,3,2000);
+        Funcionario funcionario1 = new Funcionario("Luiza","TI","Canoas", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario2 = funcionario1;
 
         funcionario1.igual(funcionario2);

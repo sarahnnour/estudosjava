@@ -1,25 +1,12 @@
-package exercicioRelascionamento.exercicio6;
+package exercicioRelascionamento.exercicio7;
+
+import exercicioRelascionamento.exercicio6.Data;
 
 import java.util.Objects;
 
 /**
- Altere a classe Funcionario para ao invés de utilizar uma String para representar a data, crie uma
- outra classe, chamada Data, que possui 3 campos int, para dia, mês e ano. Faça com que seu
- funcionário passe a usá-la.
- Um esboço da classe:
- class Funcionario {
- Prof. Marcio Bigolin – marcio.bigolin@canoas.ifrs.edu.br
- Programação Orientada a Objetos
- Data dataDeEntrada; // qual é o valor default aqui?
- // seus outros atributos e métodos
- }
- Modifique o método testaFuncionario() da classe FuncionarioTest para que você crie uma
- Data e atribua ela ao Funcionario.
- Funcionario f1 = new Funcionario();
- //...
- Data data = new Data(); // ligação!
- f1.dataDeEntrada = data;
- //continua os testes
+ Modifique o seu teste para verificar se o nome e o salario são os mesmos: ou seja mesmo com
+ referências diferentes o objeto deve retornar que são iguais
 
 
  */
@@ -70,5 +57,23 @@ public class Funcionario {
             return;
         }
         System.out.println("É diferente");
+    }
+
+    public void igualNomeESalario(Funcionario funcionario){
+        if(Objects.equals(funcionario.getNome(), getNome())){
+            if(Objects.equals(funcionario.getSalario(), getSalario())){
+                System.out.println("É igual");
+                return;
+            }
+        }
+        System.out.println("É diferente");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getSalario() {
+        return salario;
     }
 }

@@ -1,6 +1,7 @@
-package exercicioRelascionamento.exercicio6;
+package exercicioRelascionamento.exercicio7;
 
-import exercicioRelascionamento.exercicio6.Funcionario;
+import exercicioRelascionamento.exercicio6.Data;
+import exercicioRelascionamento.exercicio7.Funcionario;
 
 public class FuncionarioTest {
     static void main() {
@@ -15,7 +16,7 @@ public class FuncionarioTest {
     }
 
     public static void testFuncionario(){
-        Data dataEntrada = new Data(01,3,2000);
+        exercicioRelascionamento.exercicio6.Data dataEntrada = new exercicioRelascionamento.exercicio6.Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
 
         System.out.println("Antes de usar os métodos demite() e bonifica()");
@@ -29,17 +30,18 @@ public class FuncionarioTest {
     }
 
     public static void testaFuncionariosIguais(){
-        Data dataEntrada = new Data(01,3,2000);
+        exercicioRelascionamento.exercicio6.Data dataEntrada = new exercicioRelascionamento.exercicio6.Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario2 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
-        Funcionario funcionario3 = new Funcionario("Luiza","TI","Canoas", 1000, dataEntrada, "21344322", true);
+        Funcionario funcionario3 = new Funcionario("Sarah","TI","Canoas", 1000, dataEntrada, "21344322", true);
 
         funcionario1.igual(funcionario2);
         funcionario1.igual(funcionario3);
+        funcionario1.igualNomeESalario(funcionario3);
     }
 
     public static void testaFuncionariosComMesmaReferencia(){
-        Data dataEntrada = new Data(01,3,2000);
+        exercicioRelascionamento.exercicio6.Data dataEntrada = new Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Luiza","TI","Canoas", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario2 = funcionario1;
 

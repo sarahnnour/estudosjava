@@ -1,11 +1,17 @@
-package exercicioRelascionamento.exercicio4;
+package exercicioRelascionamento.exercicio5;
 
-import exercicioRelascionamento.exercicio4.Funcionario;
+import exercicioRelascionamento.exercicio5.Funcionario;
 
 public class FuncionarioTest {
     static void main() {
+        System.out.println("---Método testFuncionario()");
         testFuncionario();
+
+        System.out.println("---Método testaFuncionariosIguais()");
         testaFuncionariosIguais();
+
+        System.out.println("---Método testaFuncionariosComMesmaReferencia()");
+        testaFuncionariosComMesmaReferencia();
     }
 
     public static void testFuncionario(){
@@ -28,5 +34,12 @@ public class FuncionarioTest {
 
         funcionario1.igual(funcionario2);
         funcionario1.igual(funcionario3);
+    }
+
+    public static void testaFuncionariosComMesmaReferencia(){
+        Funcionario funcionario1 = new Funcionario("Luiza","TI","Canoas", 1000, "28-10-2024", "21344322", true);
+        Funcionario funcionario2 = funcionario1;
+
+        funcionario1.igual(funcionario2);
     }
 }

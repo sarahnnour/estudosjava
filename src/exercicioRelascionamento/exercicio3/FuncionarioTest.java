@@ -1,4 +1,6 @@
-package exercicioRelascionamento.exercicio2;
+package exercicioRelascionamento.exercicio3;
+
+import exercicioRelascionamento.exercicio2.Funcionario;
 
 public class FuncionarioTest {
     static void main() {
@@ -6,7 +8,7 @@ public class FuncionarioTest {
     }
 
     public static void testFuncionario(){
-        Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, "28-10-2024", "21344322", true);
+        exercicioRelascionamento.exercicio2.Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, "28-10-2024", "21344322", true);
 
         System.out.println("Antes de usar os métodos demite() e bonifica()");
         System.out.println(funcionario1.toString());

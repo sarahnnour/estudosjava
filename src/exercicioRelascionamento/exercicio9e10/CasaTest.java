@@ -1,4 +1,4 @@
-package exercicioRelascionamento.exercicio9;
+package exercicioRelascionamento.exercicio9e10;
 
 public class CasaTest {
 }

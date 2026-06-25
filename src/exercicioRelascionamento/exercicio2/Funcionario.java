@@ -1,13 +1,23 @@
-package exercicioRelascionamento.exercicio1;
+package exercicioRelascionamento.exercicio2;
 /**
-Sarah Nour - implemente uma classe Funcionário que deve ter o nome do funcionário, o departamento onde
-trabalha, seu salário (double), a data de entrada no banco (String), seu RG (String) e um valor
-booleano que indique se o funcionário está na empresa no momento ou se já foi embora.
-Você deve criar alguns métodos de acordo com sua necessidade. Além deles, crie um método
-bonifica que aumenta o salário do funcionário de acordo com o parâmetro passado como
-argumento. Crie, também, um método demite, que não recebe parâmetro algum, só modifica o
-valor booleano indicando que o funcionário não trabalha mais aqui. Identifique que informações
-são importantes para o funcionário e o que um funcionário faz.
+Sarah Nour - Crie uma classe para testar a classe Funcionario chamada FuncionarioTeste. Esta nova classe
+ deve conter o método main.
+ Um esboço da classe que possui o FuncionarioTeste:
+ public class FuncionarioTeste {
+
+ public static void main(String[] args) {
+ testaFuncionario();
+ }
+ public void testaFuncionario(){
+ Funcionario meuFuncionario = new Funcionario();
+ //Atribua valores ao funcionário, passando o salario = 1000
+ //Execute o método bonifica passando o valor 100
+ //Imprima o salario atual
+ }
+ }
+ Incremente essa classe. Faça outros testes, imprima outros atributos e invoque os métodos que
+ você criou a mais. Teste valores inválidos. Lembre-se de seguir a convenção java, isso é
+ importantíssimo. Isto é, nomeDeAtributo, nomeDeMetodo, nomeDeVariavel, NomeDeClasse, etc...
  */
 public class Funcionario {
     private String nome;
@@ -26,6 +36,19 @@ public class Funcionario {
         this.dataEntrada = dataEntrada;
         this.rg = rg;
         this.estaNaEmpresa = estaNaEmpresa;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", departamento='" + departamento + '\'' +
+                ", localTrabalho='" + localTrabalho + '\'' +
+                ", salario=" + salario +
+                ", dataEntrada='" + dataEntrada + '\'' +
+                ", rg='" + rg + '\'' +
+                ", estaNaEmpresa=" + estaNaEmpresa +
+                '}';
     }
 
     public void bonifica(double aumento){

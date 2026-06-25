@@ -1,16 +1,26 @@
-package exercicioRelascionamento.exercicio5;
+package exercicioRelascionamento.exercicio6;
 
 import java.util.Objects;
 
 /**
- Na classe de teste, crie outro método chamado testaFuncionariosComMesmaReferencia() que
- utiliza referências para o mesmo funcionário e compare-os com o método igual(). Imprima os
- resultados de forma semelhante ao método testaFuncionariosIguais(). Para criar duas
- referências para o mesmo funcionário, utilize:
- Funcionario f1 = new Funcionario():
- f1.nome = "Paulo";
- f1.salario = 100;
- Funcionario f2 = f1;
+ Altere a classe Funcionario para ao invés de utilizar uma String para representar a data, crie uma
+ outra classe, chamada Data, que possui 3 campos int, para dia, mês e ano. Faça com que seu
+ funcionário passe a usá-la.
+ Um esboço da classe:
+ class Funcionario {
+ Prof. Marcio Bigolin – marcio.bigolin@canoas.ifrs.edu.br
+ Programação Orientada a Objetos
+ Data dataDeEntrada; // qual é o valor default aqui?
+ // seus outros atributos e métodos
+ }
+ Modifique o método testaFuncionario() da classe FuncionarioTest para que você crie uma
+ Data e atribua ela ao Funcionario.
+ Funcionario f1 = new Funcionario();
+ //...
+ Data data = new Data(); // ligação!
+ f1.dataDeEntrada = data;
+ //continua os testes
+
 
  */
 public class Funcionario {
@@ -18,11 +28,11 @@ public class Funcionario {
     private String departamento;
     private String localTrabalho;
     private double salario;
-    private String dataEntrada;
+    private Data dataEntrada;
     private String rg;
     private boolean estaNaEmpresa;
 
-    public Funcionario(String nome, String departamento, String localTrabalho, double salario, String dataEntrada, String rg, boolean estaNaEmpresa) {
+    public Funcionario(String nome, String departamento, String localTrabalho, double salario, Data dataEntrada, String rg, boolean estaNaEmpresa) {
         this.nome = nome;
         this.departamento = departamento;
         this.localTrabalho = localTrabalho;
@@ -40,7 +50,7 @@ public class Funcionario {
                 ", departamento='" + departamento + '\'' +
                 ", localTrabalho='" + localTrabalho + '\'' +
                 ", salario=" + salario +
-                ", dataEntrada='" + dataEntrada + '\'' +
+                ", dataEntrada='" + dataEntrada.toString() + '\'' +
                 ", rg='" + rg + '\'' +
                 ", estaNaEmpresa=" + estaNaEmpresa +
                 '}';

@@ -1,14 +1,13 @@
-package exercicioRelascionamento.exercicio7;
+package exercicioRelascionamento.exercicio8;
 
 import exercicioRelascionamento.exercicio6.Data;
 
 import java.util.Objects;
 
 /**
- Modifique o seu teste para verificar se o nome e o salario são os mesmos: ou seja mesmo com
- referências diferentes o objeto deve retornar que são iguais
-
-
+ Modifique seu método mostra() para que ele imprima o valor da dataDeEntrada daquele
+ funcionário. Para isso, na classe Data, crie um método chamado formatada() que imprime a data
+ formatada como uma String “dd/mm/aaaa”.
  */
 public class Funcionario {
     private String nome;

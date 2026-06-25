@@ -1,4 +1,4 @@
-package exercicioRelascionamento.exercicio7;
+package exercicioRelascionamento.exercicio8;
 
 import exercicioRelascionamento.exercicio6.Data;
 import exercicioRelascionamento.exercicio7.Funcionario;
@@ -16,7 +16,7 @@ public class FuncionarioTest {
     }
 
     public static void testFuncionario(){
-        exercicioRelascionamento.exercicio6.Data dataEntrada = new exercicioRelascionamento.exercicio6.Data(01,3,2000);
+        Data dataEntrada = new Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
 
         System.out.println("Antes de usar os métodos demite() e bonifica()");
@@ -30,7 +30,7 @@ public class FuncionarioTest {
     }
 
     public static void testaFuncionariosIguais(){
-        exercicioRelascionamento.exercicio6.Data dataEntrada = new exercicioRelascionamento.exercicio6.Data(01,3,2000);
+        Data dataEntrada = new Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario2 = new Funcionario("Sarah","TI","Porto Alegre", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario3 = new Funcionario("Sarah","TI","Canoas", 1000, dataEntrada, "21344322", true);
@@ -41,7 +41,7 @@ public class FuncionarioTest {
     }
 
     public static void testaFuncionariosComMesmaReferencia(){
-        exercicioRelascionamento.exercicio6.Data dataEntrada = new Data(01,3,2000);
+        Data dataEntrada = new Data(01,3,2000);
         Funcionario funcionario1 = new Funcionario("Luiza","TI","Canoas", 1000, dataEntrada, "21344322", true);
         Funcionario funcionario2 = funcionario1;
 

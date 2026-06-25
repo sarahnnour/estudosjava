@@ -1,27 +1,47 @@
-package exercicioRelascionamento.exercicio3;
+package exercicioRelascionamento.exercicio4;
+
+import java.util.Objects;
+
 /**
- Crie um método mostra() que não recebe nem devolve parâmetro algum, simplesmente imprime a
- especificação e o valor de todos os atributos do nosso funcionário. Dessa maneira, você não
- precisa ficar copiando e colando um monte de System.out.println() para verificar o estado do
- objeto a cada mudança.
+ SARAH NOUR - Na classe Funcionario, construa um método chamado igual(Funcionario func) que recebe um
+ funcionários e retorna um valor booleano indicando se o funcionário recebido é igual ao próprio. Na
+ classe de teste, crie um método testaFuncionariosIguais() que cria dois novos funcionários
+ (usando new) e atribui as variáveis os mesmos valores. Na classe de teste, execute o método
+ iguais(Funcionario func) para compará-los.
  class Funcionario {
  // seus outros atributos e métodos
+ boolean iguais(Funcionario func){
+ if (this == func) {
+ return true;
+ } else {
+ return false;
+ }
+ }
+ public class FuncionarioTeste {
+
+ public static void main(String[] args) {
+ testaFuncionario();
+ testaFuncionariosIguais();
  Prof. Marcio Bigolin – marcio.bigolin@canoas.ifrs.edu.br
  Programação Orientada a Objetos
- void mostra() {
- System.out.println("Nome: " + this.nome);
- // imprimir aqui os outros atributos...
- // também pode imprimir this.calculaGanhoAnual()
+ }
+ public void testaFuncionariosIguais(){
+ Funcionario f1 = new Funcionario();
+ f1.setNome("Pedro");
+ f1.setSalario(100);
+ Funcionario f2 = new Funcionario();
+ f2.setNome("Pedro");
+ f2.setSalario(100);
+ if (f1.igual(f2)){
+ System.out.println("Os funcionários são iguais");
+ } else{
+ System.out.println("Os funcionários são diferentes");
  }
  }
- Mais tarde veremos o método toString, que é uma solução muito mais elegante para mostrar a
- representação de um objeto como String, além de não jogar tudo pro System.out (só se você
- desejar).
- Na classe de teste, faça o método testaFuncionario() executar o recém criado mostra()após
- criar o usuário e bonificá-lo.
- Funcionario meuFuncionario = new Funcionario();
- //código existente
- meuFuncionario.mostra();
+ }
+ Faça as consistências para executar o método sem erro através da invocação f1.igual(null).
+ Inclua isso no método de teste.
+
  */
 public class Funcionario {
     private String nome;
@@ -62,5 +82,13 @@ public class Funcionario {
 
     public void demite(){
         estaNaEmpresa = false;
+    }
+
+    public void igual(Funcionario funcionario){
+        if(Objects.equals(funcionario.toString(), toString())){
+            System.out.println("É igual");
+            return;
+        }
+        System.out.println("É diferente");
     }
 }

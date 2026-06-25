@@ -1,4 +1,4 @@
-package exercicioRelascionamento.exercicio6;
+package exercicioRelascionamento.exercicio7;
 
 public class Data {
     private int dia;

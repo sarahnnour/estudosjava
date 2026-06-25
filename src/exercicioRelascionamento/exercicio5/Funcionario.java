@@ -1,46 +1,16 @@
-package exercicioRelascionamento.exercicio4;
+package exercicioRelascionamento.exercicio5;
 
 import java.util.Objects;
 
 /**
- SARAH NOUR - Na classe Funcionario, construa um método chamado igual(Funcionario func) que recebe um
- funcionários e retorna um valor booleano indicando se o funcionário recebido é igual ao próprio. Na
- classe de teste, crie um método testaFuncionariosIguais() que cria dois novos funcionários
- (usando new) e atribui as variáveis os mesmos valores. Na classe de teste, execute o método
- iguais(Funcionario func) para compará-los.
- class Funcionario {
- // seus outros atributos e métodos
- boolean iguais(Funcionario func){
- if (this == func) {
- return true;
- } else {
- return false;
- }
- }
- public class FuncionarioTeste {
-
- public static void main(String[] args) {
- testaFuncionario();
- testaFuncionariosIguais();
- Prof. Marcio Bigolin – marcio.bigolin@canoas.ifrs.edu.br
- Programação Orientada a Objetos
- }
- public void testaFuncionariosIguais(){
- Funcionario f1 = new Funcionario();
- f1.setNome("Pedro");
- f1.setSalario(100);
- Funcionario f2 = new Funcionario();
- f2.setNome("Pedro");
- f2.setSalario(100);
- if (f1.igual(f2)){
- System.out.println("Os funcionários são iguais");
- } else{
- System.out.println("Os funcionários são diferentes");
- }
- }
- }
- Faça as consistências para executar o método sem erro através da invocação f1.igual(null).
- Inclua isso no método de teste.
+ Na classe de teste, crie outro método chamado testaFuncionariosComMesmaReferencia() que
+ utiliza referências para o mesmo funcionário e compare-os com o método igual(). Imprima os
+ resultados de forma semelhante ao método testaFuncionariosIguais(). Para criar duas
+ referências para o mesmo funcionário, utilize:
+ Funcionario f1 = new Funcionario():
+ f1.nome = "Paulo";
+ f1.salario = 100;
+ Funcionario f2 = f1;
 
  */
 public class Funcionario {

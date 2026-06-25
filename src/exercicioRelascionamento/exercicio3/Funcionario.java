@@ -1,23 +1,27 @@
-package exercicioRelascionamento.exercicio2;
+package exercicioRelascionamento.exercicio3;
 /**
-Sarah Nour - Crie uma classe para testar a classe Funcionario chamada FuncionarioTeste. Esta nova classe
- deve conter o método main.
- Um esboço da classe que possui o FuncionarioTeste:
- public class FuncionarioTeste {
-
- public static void main(String[] args) {
- testaFuncionario();
+ Crie um método mostra() que não recebe nem devolve parâmetro algum, simplesmente imprime a
+ especificação e o valor de todos os atributos do nosso funcionário. Dessa maneira, você não
+ precisa ficar copiando e colando um monte de System.out.println() para verificar o estado do
+ objeto a cada mudança.
+ class Funcionario {
+ // seus outros atributos e métodos
+ Prof. Marcio Bigolin – marcio.bigolin@canoas.ifrs.edu.br
+ Programação Orientada a Objetos
+ void mostra() {
+ System.out.println("Nome: " + this.nome);
+ // imprimir aqui os outros atributos...
+ // também pode imprimir this.calculaGanhoAnual()
  }
- public void testaFuncionario(){
+ }
+ Mais tarde veremos o método toString, que é uma solução muito mais elegante para mostrar a
+ representação de um objeto como String, além de não jogar tudo pro System.out (só se você
+ desejar).
+ Na classe de teste, faça o método testaFuncionario() executar o recém criado mostra()após
+ criar o usuário e bonificá-lo.
  Funcionario meuFuncionario = new Funcionario();
- //Atribua valores ao funcionário, passando o salario = 1000
- //Execute o método bonifica passando o valor 100
- //Imprima o salario atual
- }
- }
- Incremente essa classe. Faça outros testes, imprima outros atributos e invoque os métodos que
- você criou a mais. Teste valores inválidos. Lembre-se de seguir a convenção java, isso é
- importantíssimo. Isto é, nomeDeAtributo, nomeDeMetodo, nomeDeVariavel, NomeDeClasse, etc...
+ //código existente
+ meuFuncionario.mostra();
  */
 public class Funcionario {
     private String nome;
@@ -38,6 +42,7 @@ public class Funcionario {
         this.estaNaEmpresa = estaNaEmpresa;
     }
 
+    /* Já utilize o toString então não criei o mostra()*/
     @Override
     public String toString() {
         return "Funcionario{" +

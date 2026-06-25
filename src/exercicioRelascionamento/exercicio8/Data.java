@@ -1,4 +1,4 @@
-package exercicioRelascionamento.exercicio7;
+package exercicioRelascionamento.exercicio8;
 
 public class Data {
     private int dia;
@@ -11,11 +11,12 @@ public class Data {
         this.dia = dia;
     }
 
+    /* metodo formata() troquei para o toString()*/
     @Override
     public String toString() {
         return
                 dia +
-                "-" + mes +
-                "-" + ano ;
+                "/" + mes +
+                "/" + ano ;
     }
 }
